@@ -1,9 +1,18 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    -- config = function()
-    --   require "configs.lspconfig"
-    -- end,
+    opts = function(_, opts)
+      opts.servers.clangd.cmd = {
+        "clangd",
+        "--background-index",
+        "--clang-tidy",
+        "--header-insertion=iwyu",
+        "--completion-style=detailed",
+        "--function-arg-placeholders",
+        "--fallback-style=microsoft",
+      }
+      return opts
+    end,
   },
   {
     "williamboman/mason.nvim",
