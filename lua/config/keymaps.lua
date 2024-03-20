@@ -22,7 +22,7 @@ map("n", "<leader>dt", "<cmd> DapUiToogle <CR>", { desc = "Toggle debugger UI" }
 -- Taken from https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/lua/config/keymaps.lua
 -- Split window
 -- Select all
-map("n", "<C-a>", "gg<S-v>G")
+-- map("n", "<C-a>", "ggVG")
 map("n", "ss", ":split<Return>", opts)
 map("n", "sv", ":vsplit<Return>", opts)
 -- Buffer Delete

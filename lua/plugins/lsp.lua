@@ -18,7 +18,7 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        -- "lua-language-server",
+        "lua-language-server",
         -- "stylua",
         -- "typescript-language-server",
         -- "eslint_d",
