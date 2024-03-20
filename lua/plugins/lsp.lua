@@ -9,7 +9,7 @@ return {
         "--header-insertion=iwyu",
         "--completion-style=detailed",
         "--function-arg-placeholders",
-        "--fallback-style=microsoft",
+        "--fallback-style=Microsoft",
       }
       return opts
     end,
@@ -28,7 +28,7 @@ return {
         -- "prettierd",
         -- "clangd",
         -- "codelldb",
-        -- "clang-format",
+        "clang-format",
         "cpplint",
         -- "ruff-lsp",
         "pyright",

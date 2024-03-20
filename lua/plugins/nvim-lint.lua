@@ -1,7 +1,7 @@
 return {
   "mfussenegger/nvim-lint",
   event = "VeryLazy",
-  config = function()
+  opts = function()
     require("config.nvim-lint")
   end,
 }

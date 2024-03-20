@@ -11,7 +11,7 @@ return {
 ██║  ██╗███████╗ ╚████╔╝ ██║██║ ╚═╝ ██║
 ╚═╝  ╚═╝╚══════╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-           [ @kevinnitrog ]
+           [ Kevin Nitro ]
     ]]
       dashboard.section.header.val = vim.split(logo, "\n")
     end,
