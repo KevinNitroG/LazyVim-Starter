@@ -5,4 +5,8 @@ return {
       colorscheme = "catppuccin-macchiato",
     },
   },
+  {
+    "folke/flash.nvim",
+    enabled = false,
+  },
 }

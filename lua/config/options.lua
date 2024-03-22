@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 vim.opt.relativenumber = true
+vim.opt.wrap = true
 vim.opt.hlsearch = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4

@@ -13,7 +13,7 @@ return {
     -- flow = { "prettierd" },
     -- graphql = { "prettierd" },
     -- html = { "prettierd" },
-    -- json = { "prettierd" },
+    json = { "prettierd" },
     -- jsx = { "prettierd" },
     -- less = { "prettierd" },
     -- markdown = { "prettierd" },

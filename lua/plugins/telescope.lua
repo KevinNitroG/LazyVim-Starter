@@ -20,68 +20,69 @@ return {
         desc = "Find Plugin File",
       },
       {
-        ";f",
+        "<leader>ff",
         function()
           local builtin = require("telescope.builtin")
           builtin.find_files({
-            no_ignore = false,
+            no_ignore = true,
+            no_ignore_parent = true,
             hidden = true,
           })
         end,
-        desc = "Lists files in your current working directory, respects .gitignore",
+        desc = "Find Files (root dir)",
       },
       {
-        ";r",
+        "<leader>sg",
         function()
           local builtin = require("telescope.builtin")
           builtin.live_grep({
-            additional_args = { "--hidden" },
+            -- additional_args = { "--hidden" },
           })
         end,
-        desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
+        desc = "Grep (root dir)",
       },
+      -- {
+      --   "\\\\",
+      --   function()
+      --     local builtin = require("telescope.builtin")
+      --     builtin.buffers()
+      --   end,
+      --   desc = "Lists open buffers",
+      -- },
+      -- {
+      --   ";t",
+      --   function()
+      --     local builtin = require("telescope.builtin")
+      --     builtin.help_tags()
+      --   end,
+      --   desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
+      -- },
+      -- {
+      --   ";;",
+      --   function()
+      --     local builtin = require("telescope.builtin")
+      --     builtin.resume()
+      --   end,
+      --   desc = "Resume the previous telescope picker",
+      -- },
+      -- {
+      --   ";e",
+      --   function()
+      --     local builtin = require("telescope.builtin")
+      --     builtin.diagnostics()
+      --   end,
+      --   desc = "Lists Diagnostics for all open buffers or a specific buffer",
+      -- },
+      -- {
+      --   ";s",
+      --   function()
+      --     local builtin = require("telescope.builtin")
+      --     builtin.treesitter()
+      --   end,
+      --   desc = "Lists Function names, variables, from Treesitter",
+      -- },
       {
-        "\\\\",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.buffers()
-        end,
-        desc = "Lists open buffers",
-      },
-      {
-        ";t",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.help_tags()
-        end,
-        desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
-      },
-      {
-        ";;",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.resume()
-        end,
-        desc = "Resume the previous telescope picker",
-      },
-      {
-        ";e",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.diagnostics()
-        end,
-        desc = "Lists Diagnostics for all open buffers or a specific buffer",
-      },
-      {
-        ";s",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.treesitter()
-        end,
-        desc = "Lists Function names, variables, from Treesitter",
-      },
-      {
-        "sf",
+        "<leader>sf",
         function()
           local telescope = require("telescope")
 
@@ -95,12 +96,12 @@ return {
             respect_gitignore = false,
             hidden = true,
             grouped = true,
-            previewer = false,
+            previewer = true,
             initial_mode = "normal",
             layout_config = { height = 40 },
           })
         end,
-        desc = "Open File Browser with the path of the current buffer",
+        desc = "File Browser (cwd)",
       },
     },
     config = function(_, opts)
@@ -142,12 +143,12 @@ return {
                 vim.cmd("startinsert")
               end,
               ["<C-u>"] = function(prompt_bufnr)
-                for i = 1, 10 do
+                for _ = 1, 10 do
                   actions.move_selection_previous(prompt_bufnr)
                 end
               end,
               ["<C-d>"] = function(prompt_bufnr)
-                for i = 1, 10 do
+                for _ = 1, 10 do
                   actions.move_selection_next(prompt_bufnr)
                 end
               end,
