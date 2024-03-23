@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    event = { "VeryLazy", "BufEnter" },
     opts = {
       ensure_installed = {
         "lua",

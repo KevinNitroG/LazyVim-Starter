@@ -1,6 +1,7 @@
 return {
   {
     "CRAG666/code_runner.nvim",
+    event = "VeryLazy",
     dependencies = {
       "betterTerm.nvim",
     },

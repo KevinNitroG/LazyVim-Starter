@@ -1,6 +1,6 @@
 return {
   "mfussenegger/nvim-lint",
-  event = "VeryLazy",
+  event = { "BufEnter", "BufWritePost" },
   opts = function()
     require("config.nvim-lint")
   end,

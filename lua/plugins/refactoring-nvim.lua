@@ -1,6 +1,7 @@
 return {
   {
     "ThePrimeagen/refactoring.nvim",
+    event = { "BufEnter", "InsertLeave" },
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",

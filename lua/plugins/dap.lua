@@ -1,6 +1,7 @@
 -- Extend default dap of lazyvim
 return {
   "mfussenegger/nvim-dap-python",
+  event = { "BufEnter" },
   config = function()
     local os_type = require("utils.get-os")
     local path = {

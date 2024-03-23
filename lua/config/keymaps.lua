@@ -36,6 +36,3 @@ map("n", "sv", ":vsplit<Return>", opts)
 -- map("n", "<leader>x", "<leader>bd", { desc = "Delete buffer - User" })
 -- New tab
 map("n", "te", ":tabedit")
-
--- Run code-runner
--- map({ "n", "i" }, "<F5>", require("config.code-runner"), { desc = "Code runner" })
