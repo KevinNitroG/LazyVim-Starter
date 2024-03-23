@@ -31,9 +31,5 @@ return {
         dismiss = "<M-j>",
       },
     },
-    config = function()
-      require("copilot").setup({})
-      vim.g.copilot_assume_mapped = true
-    end,
   },
 }
