@@ -7,19 +7,20 @@ local opts = { noremap = true, silent = true }
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map({ "i", "t" }, "jk", "<ESC>", { desc = "Escape insert mode" })
-map("n", "<A-j", ":m +1<CR>==")
-map("n", "<A-k", ":m -2<CR>==")
-map("i", "<A-j", "<ESC>:m +1<CR>==gi")
-map("i", "<A-k", "<ESC>:m -2<CR>==gi")
-map("v", "<A-j", ":m '>+1<CR>gv=gv")
-map("v", "<A-k", ":m '<-2<CR>gv=gv")
+map("n", "<M-j>", ":m +1<CR>==")
+map("n", "<M-k>", ":m -2<CR>==")
+map("i", "<M-j>", "<ESC>:m +1<CR>==gi")
+map("i", "<M-k>", "<ESC>:m -2<CR>==gi")
+map("v", "<M-j>", ":m '>+1<CR>gv=gv")
+map("v", "<M-k>", ":m '<-2<CR>gv=gv")
 
 -- Delete forward word
 map("n", "<C-DEL>", "dw", opts)
 map("i", "<C-DEL>", "<space><ESC>ce", opts)
 
--- Delete current line in insert
--- map("i", "<C-S-BS>", "<ESC>ddi", opts)
+-- Delete backword word
+map("n", "<C-BS>", "i<C-w><ESC>", opts)
+map("i", "<C-BS>", "<C-w>", opts)
 
 -- DAP
 map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
