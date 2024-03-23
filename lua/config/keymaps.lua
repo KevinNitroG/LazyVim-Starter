@@ -6,7 +6,7 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+map({ "i", "t" }, "jk", "<ESC>", { desc = "Escape insert mode" })
 map("n", "<A-j", ":m +1<CR>==")
 map("n", "<A-k", ":m -2<CR>==")
 map("i", "<A-j", "<ESC>:m +1<CR>==gi")

@@ -2,7 +2,7 @@ local config = {
   keymap = function()
     local betterTerm = require("betterTerm")
     -- toggle firts term
-    vim.keymap.set({ "n", "t" }, "<C-`>", betterTerm.open, { desc = "Open terminal" })
+    vim.keymap.set({ "n", "t" }, "<leader>tt", betterTerm.open, { desc = "Open / Toggle terminal" })
     -- Select term focus
     vim.keymap.set({ "n" }, "<leader>ts", betterTerm.select, { desc = "Select terminal" })
     -- Create new term

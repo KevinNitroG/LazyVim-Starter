@@ -44,11 +44,8 @@ return {
   },
   {
     "p00f/clangd_extensions.nvim",
-    lazy = true,
-    opts = {
-      opts = {
-        inlay_hints = { enabled = true },
-      },
-    },
+    opts = function(_, opts)
+      opts.inlay_hints.inline = true
+    end,
   },
 }

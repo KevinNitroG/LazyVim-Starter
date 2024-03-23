@@ -1,10 +1,3 @@
-local os_type = require("utils.get-os")
-local code_runner_config_ft
-if os_type == "Windows" then
-  code_runner_config_ft = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "\\code-runner.json"
-elseif os_type == "Linux" then
-  code_runner_config_ft = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "/code-runner.json"
-end
 local config = {
   keymap = function()
     vim.keymap.set("n", "<leader>r", ":RunCode<CR>", { noremap = true, silent = false })
@@ -17,8 +10,8 @@ local config = {
   end,
   setup = function()
     require("code_runner").setup({
-      filetype_path = code_runner_config_ft,
-      -- project_path = vim.fn.expand("~/.config/nvim/project_manager.json"),
+      filetype_path = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "/code-runner.json",
+      startinsert = true,
     })
   end,
 }
