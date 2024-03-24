@@ -2,11 +2,8 @@ return {
   {
     "CRAG666/code_runner.nvim",
     event = "VeryLazy",
-    dependencies = {
-      "betterTerm.nvim",
-    },
     opts = {
-      mode = "toogle",
+      mode = "toggleterm",
     },
     config = function()
       require("config.code-runner").keymap()
