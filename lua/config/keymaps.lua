@@ -7,12 +7,12 @@ local opts = { noremap = true, silent = true }
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map({ "i", "t" }, "jk", "<ESC>", { desc = "Escape insert mode" })
-map("n", "<M-j>", ":m +1<CR>==")
-map("n", "<M-k>", ":m -2<CR>==")
-map("i", "<M-j>", "<ESC>:m +1<CR>==gi")
-map("i", "<M-k>", "<ESC>:m -2<CR>==gi")
-map("v", "<M-j>", ":m '>+1<CR>gv=gv")
-map("v", "<M-k>", ":m '<-2<CR>gv=gv")
+map("n", "<M-j>", ":m +1<CR>==", opts)
+map("n", "<M-k>", ":m -2<CR>==", opts)
+map("i", "<M-j>", "<ESC>:m +1<CR>==gi", opts)
+map("i", "<M-k>", "<ESC>:m -2<CR>==gi", opts)
+map("v", "<M-j>", ":m '>+1<CR>gv=gv", opts)
+map("v", "<M-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Delete forward word
 map("n", "<C-DEL>", "dw", opts)
@@ -23,17 +23,27 @@ map("n", "<C-BS>", "i<C-w><ESC>", opts)
 map("i", "<C-BS>", "<C-w>", opts)
 
 -- DAP
-map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
-map("n", "<leader>dr", "<cmd> DapContinue <CR>", { desc = "Start or continue the debugger" })
-map("n", "<leader>dt", "<cmd> DapUiToogle <CR>", { desc = "Toggle debugger UI" })
+map(
+  "n",
+  "<leader>db",
+  "<cmd> DapToggleBreakpoint <CR>",
+  { noremap = true, silent = true, desc = "Add breakpoint at line" }
+)
+map(
+  "n",
+  "<leader>dr",
+  "<cmd> DapContinue <CR>",
+  { noremap = true, silent = true, desc = "Start or continue the debugger" }
+)
+map("n", "<leader>dt", "<cmd> DapUiToogle <CR>", { noremap = true, silent = true, desc = "Toggle debugger UI" })
 
 -- Taken from https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/lua/config/keymaps.lua
 -- Split window
 -- Select all
 -- map("n", "<C-a>", "ggVG")
-map("n", "ss", ":split<Return>", opts)
-map("n", "sv", ":vsplit<Return>", opts)
+map("n", "ss", ":split<Return>", { noremap = true, silent = true, desc = "Split horizontal" })
+map("n", "sv", ":vsplit<Return>", { noremap = true, silent = true, desc = "Split vertical" })
 -- Buffer Delete
 -- map("n", "<leader>x", "<leader>bd", { desc = "Delete buffer - User" })
 -- New tab
-map("n", "te", ":tabedit")
+map("n", "te", ":tabedit", { noremap = true, silent = true, desc = "Table edit" })

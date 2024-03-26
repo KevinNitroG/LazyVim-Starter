@@ -10,9 +10,8 @@ return {
         -- "--header-insertion=iwyu",
         "--completion-style=detailed",
         "--function-arg-placeholders",
-        "--fallback-style=Microsoft",
+        "--fallback-style=microsoft",
       }
-      return opts
     end,
   },
   {

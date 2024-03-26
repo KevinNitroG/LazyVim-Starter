@@ -8,11 +8,11 @@ return {
     },
     keys = {
       {
-        "<leader>r",
+        "<leader>rf",
         function()
           require("refactoring").select_refactor()
         end,
-        mode = "v",
+        mode = { "v", "n" },
         noremap = true,
         silent = true,
         expr = false,

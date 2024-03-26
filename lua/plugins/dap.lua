@@ -1,7 +1,7 @@
 -- Extend default dap of lazyvim
 return {
   "mfussenegger/nvim-dap-python",
-  ft = "python",
+  -- ft = "python",
   config = function()
     local os_type = require("utils.get-os")
     local path = {

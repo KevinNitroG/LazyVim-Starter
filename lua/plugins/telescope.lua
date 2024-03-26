@@ -32,64 +32,12 @@ return {
         desc = "Find Files (root dir)",
       },
       {
-        "<leader>sg",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.live_grep({
-            -- additional_args = { "--hidden" },
-          })
-        end,
-        desc = "Grep (root dir)",
-      },
-      -- {
-      --   "\\\\",
-      --   function()
-      --     local builtin = require("telescope.builtin")
-      --     builtin.buffers()
-      --   end,
-      --   desc = "Lists open buffers",
-      -- },
-      -- {
-      --   ";t",
-      --   function()
-      --     local builtin = require("telescope.builtin")
-      --     builtin.help_tags()
-      --   end,
-      --   desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
-      -- },
-      -- {
-      --   ";;",
-      --   function()
-      --     local builtin = require("telescope.builtin")
-      --     builtin.resume()
-      --   end,
-      --   desc = "Resume the previous telescope picker",
-      -- },
-      -- {
-      --   ";e",
-      --   function()
-      --     local builtin = require("telescope.builtin")
-      --     builtin.diagnostics()
-      --   end,
-      --   desc = "Lists Diagnostics for all open buffers or a specific buffer",
-      -- },
-      -- {
-      --   ";s",
-      --   function()
-      --     local builtin = require("telescope.builtin")
-      --     builtin.treesitter()
-      --   end,
-      --   desc = "Lists Function names, variables, from Treesitter",
-      -- },
-      {
         "<leader>sf",
         function()
           local telescope = require("telescope")
-
           local function telescope_buffer_dir()
             return vim.fn.expand("%:p:h")
           end
-
           telescope.extensions.file_browser.file_browser({
             path = "%:p:h",
             cwd = telescope_buffer_dir(),
@@ -103,9 +51,18 @@ return {
         end,
         desc = "File Browser (cwd)",
       },
+      {
+        "<leader>sg",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.live_grep({
+            additional_args = { "--hidden" },
+          })
+        end,
+        desc = "Grep with hidden (root dir)",
+      },
     },
-    config = function(_, opts)
-      local telescope = require("telescope")
+    opts = function(_, opts)
       local actions = require("telescope.actions")
       local fb_actions = require("telescope").extensions.file_browser.actions
 
@@ -120,6 +77,19 @@ return {
         },
       })
       opts.pickers = {
+        -- find_files = {
+        --   find_command = {
+        --     "rg",
+        --     "--files",
+        --     "hidden",
+        --     "--glob",
+        --     "--smart-case",
+        --     "!{**/.git/*, **/.v?env/*, **/node_modules/*",
+        --   },
+        -- },
+        grep_string = {
+          additional_args = { "--hidden" },
+        },
         diagnostics = {
           theme = "ivy",
           initial_mode = "normal",
@@ -158,7 +128,9 @@ return {
           },
         },
       }
-      telescope.setup(opts)
+    end,
+    config = function(_, opts)
+      require("telescope").setup(opts)
       require("telescope").load_extension("fzf")
       require("telescope").load_extension("file_browser")
     end,
