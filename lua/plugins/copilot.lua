@@ -9,7 +9,7 @@ return {
   -- event = "InsertEnter",
   keys = {
     {
-      "<leader>cp",
+      "<leader>cP",
       function()
         require("copilot.suggestion").toggle_auto_trigger()
       end,
