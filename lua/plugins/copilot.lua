@@ -1,12 +1,6 @@
--- return {
---   "copilot.lua",
---
---
--- }
 return {
   "zbirenbaum/copilot.lua",
-  -- cmd = "Copilot",
-  -- event = "InsertEnter",
+  cmd = "Copilot",
   keys = {
     {
       "<leader>cP",
@@ -23,12 +17,12 @@ return {
       auto_trigger = false,
       debounce = 75,
       keymap = {
-        accept = "<C-j>",
+        accept = "<Tab>",
+        dismiss = "<S-Tab>",
         accept_word = false,
         accept_line = false,
         next = "<M-]>",
         prev = "<M-[>",
-        dismiss = "<M-j>",
       },
     },
   },
