@@ -1,6 +1,11 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
     opts = {
       event_handlers = {
         event = "neo_tree_buffer_enter",
@@ -13,15 +18,15 @@ return {
             visible = true,
             hide_dotfiles = false,
             hide_gitignored = true,
-            hide_by_name = {
-              ".git",
-              ".DS_Store",
+            hide_hidden = false,
+            hide_by_pattern = {
+              "**/.git/*",
+              "**/.DS_Store/*",
               "thumbs.db",
-              ".venv",
-              ".idea",
-              ".nodemodules",
+              "**/.venv/*",
+              "**/.idea/*",
+              "**/.nodemodules/*",
             },
-            never_show = {},
           },
         },
       },
