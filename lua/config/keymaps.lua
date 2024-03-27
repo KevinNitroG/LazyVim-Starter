@@ -7,12 +7,12 @@ local opts = { noremap = true, silent = true }
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map({ "i", "t" }, "jk", "<ESC>", { desc = "Escape insert mode" })
-map("n", "<M-j>", ":m +1<CR>==", opts)
-map("n", "<M-k>", ":m -2<CR>==", opts)
-map("i", "<M-j>", "<ESC>:m +1<CR>==gi", opts)
-map("i", "<M-k>", "<ESC>:m -2<CR>==gi", opts)
-map("v", "<M-j>", ":m '>+1<CR>gv=gv", opts)
-map("v", "<M-k>", ":m '<-2<CR>gv=gv", opts)
+-- map("n", "<M-j>", ":m +1<CR>==", opts)
+-- map("n", "<M-k>", ":m -2<CR>==", opts)
+-- map("i", "<M-j>", "<ESC>:m +1<CR>==gi", opts)
+-- map("i", "<M-k>", "<ESC>:m -2<CR>==gi", opts)
+-- map("v", "<M-j>", ":m '>+1<CR>gv=gv", opts)
+-- map("v", "<M-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Delete forward word
 map("n", "<C-DEL>", "dw", opts)
