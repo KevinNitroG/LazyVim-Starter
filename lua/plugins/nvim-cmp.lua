@@ -7,6 +7,6 @@ return {
       completion = cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
     }
-    --   table.insert(opts.sources, { name = "emoji" })
+    -- table.insert(opts.sources, { name = "emoji" })
   end,
 }
