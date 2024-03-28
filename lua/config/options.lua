@@ -20,8 +20,10 @@ vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 vim.opt.autoindent = true
 vim.opt.smartindent = true
-vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
+-- vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.smarttab = true
+vim.opt.fileignorecase = false
+
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
