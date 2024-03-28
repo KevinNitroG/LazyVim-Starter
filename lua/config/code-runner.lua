@@ -9,20 +9,15 @@ local config = {
     -- vim.keymap.set("n", "<leader>rft", ":RunFile tab<CR>", { noremap = true, silent = false })
   end,
   setup = function()
-    require("code_runner").setup({
-      filetype_path = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "/code-runner.json",
-      startinsert = true,
-    })
-    -- register whichkey group name for code_runner
-    require("plugins.configs.whichkey")
-    local present, wk = pcall(require, "which-key")
-    if not present then
-      return
+    local config_file_path
+    if require("utils.get-os") == "Windows" then
+      config_file_path = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "/code-runner-Windows.json"
+    else
+      config_file_path = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "/code-runner-Linux.json"
     end
-    wk.register({
-      ["<leader>"] = {
-        r = { name = "code runner" },
-      },
+    require("code_runner").setup({
+      filetype_path = config_file_path,
+      startinsert = true,
     })
   end,
 }

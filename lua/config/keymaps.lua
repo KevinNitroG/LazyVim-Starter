@@ -47,3 +47,15 @@ map("n", "sv", ":vsplit<Return>", { noremap = true, silent = true, desc = "Split
 -- map("n", "<leader>x", "<leader>bd", { desc = "Delete buffer - User" })
 -- New tab
 map("n", "te", ":tabedit", { noremap = true, silent = true, desc = "Table edit" })
+
+-- register whichkey group name for code_runner
+require("which-key")
+local present, wk = pcall(require, "which-key")
+if not present then
+  return
+end
+wk.register({
+  ["<leader>"] = {
+    r = { name = "code runner" },
+  },
+})
