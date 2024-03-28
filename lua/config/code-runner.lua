@@ -10,7 +10,7 @@ local config = {
   end,
   setup = function()
     local config_file_path
-    if require("utils.get-os") == "Windows" then
+    if vim.g.os_type == "Windows" then
       config_file_path = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "/code-runner-Windows.json"
     else
       config_file_path = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "/code-runner-Linux.json"
