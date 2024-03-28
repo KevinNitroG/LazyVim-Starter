@@ -1,0 +1,14 @@
+return {}
+-- return {
+--   "olacin/telescope-gitmoji.nvim",
+--   enabled = false,
+--   dependencies = {
+--     "nvim-telescope/telescope.nvim",
+--   },
+--   keys = {
+--     "<leader>gm",
+--     require("telescope").extensions.gitmoji.gitmoji,
+--     mode = "n",
+--     desc = "telescope gitmoji",
+--   },
+-- }

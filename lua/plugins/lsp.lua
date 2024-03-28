@@ -25,6 +25,7 @@ return {
         "pyright",
         "debugpy",
         "ruff",
+        "powershell-editor-services",
       },
     },
   },

@@ -1,7 +1,7 @@
 -- Taken from https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/lua/plugins/editor.lua
 return {
   {
-    "telescope.nvim",
+    "nvim-telescope/telescope.nvim",
     dependencies = {
       {
         "nvim-telescope/telescope-fzf-native.nvim",
@@ -29,7 +29,7 @@ return {
             hidden = true,
           })
         end,
-        desc = "Find Files (root dir)",
+        desc = "Find Files (hidden) (root dir)",
       },
       {
         "<leader>sf",
@@ -49,7 +49,7 @@ return {
             layout_config = { height = 40 },
           })
         end,
-        desc = "File Browser (cwd)",
+        desc = "File Browser (hidden) (cwd)",
       },
       {
         "<leader>sg",
@@ -59,7 +59,7 @@ return {
             additional_args = { "--hidden" },
           })
         end,
-        desc = "Grep with hidden (root dir)",
+        desc = "Grep (hidden) (root dir)",
       },
     },
     opts = function(_, opts)
@@ -77,16 +77,6 @@ return {
         },
       })
       opts.pickers = {
-        -- find_files = {
-        --   find_command = {
-        --     "rg",
-        --     "--files",
-        --     "hidden",
-        --     "--glob",
-        --     "--smart-case",
-        --     "!{**/.git/*, **/.v?env/*, **/node_modules/*",
-        --   },
-        -- },
         grep_string = {
           additional_args = { "--hidden" },
         },

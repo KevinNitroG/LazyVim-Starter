@@ -3,7 +3,7 @@ return {
     "smjonas/inc-rename.nvim",
     keys = {
       {
-        "<leader>rn",
+        "<leader>cr",
         ":IncRename ",
         mode = "n",
         desc = "Inc-Rename",

@@ -7,7 +7,7 @@ return {
     },
     keys = {
       {
-        "<leader>rf",
+        "<leader>cR",
         function()
           require("refactoring").select_refactor()
         end,
