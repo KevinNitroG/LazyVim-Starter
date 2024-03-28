@@ -1,6 +1,7 @@
 return {
   {
     "zakissimo/smoji.nvim",
+    enabled = false,
     keys = {
       {
         "<leader>gm",
