@@ -1,5 +1,5 @@
--- set global variable to declare os type
-vim.g.os_type = require("kevinnitro.utils.get-os")
+-- Kevin Nitro setup
+require("kevinnitro")
 
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")

@@ -6,7 +6,7 @@ return {
     },
     keys = {
       {
-        "<leader>rr",
+        "<leader>r",
         ":RunCode<CR>",
         desc = "RunCode",
       },

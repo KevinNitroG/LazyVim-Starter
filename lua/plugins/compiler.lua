@@ -1,7 +1,7 @@
 return {
   {
     "Zeioth/compiler.nvim",
-    enabled = false,
+    enabled = false and vim.g.os_type == "Linux",
     event = "VeryLazy",
     cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },
     dependencies = { "stevearc/overseer.nvim" },
@@ -9,7 +9,7 @@ return {
   },
   {
     "stevearc/overseer.nvim",
-    enabled = false,
+    enabled = false and vim.g.os_type == "Linux",
     event = "VeryLazy",
     commit = "68a2d344cea4a2e11acfb5690dc8ecd1a1ec0ce0",
     cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },
