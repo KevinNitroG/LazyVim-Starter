@@ -22,7 +22,16 @@ return {
       },
     },
     config = function()
-      require("config.code-runner").setup()
+      local config_file_path = "lua/kevinnitro/configs/code-runner-Windows.json"
+      if vim.g.os_type == "Windows" then
+        config_file_path = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "/" .. config_file_path
+      else
+        config_file_path = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h") .. "/" .. config_file_path
+      end
+      require("code_runner").setup({
+        filetype_path = config_file_path,
+        startinsert = true,
+      })
     end,
   },
 }

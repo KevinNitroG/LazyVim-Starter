@@ -2,8 +2,8 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "VeryLazy", "BufEnter" },
-    opts = {
-      ensure_installed = {
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
         "lua",
         "vim",
         "vimdoc",
@@ -25,7 +25,7 @@ return {
         "ini",
         "json",
         "regex",
-      },
-    },
+      })
+    end,
   },
 }
