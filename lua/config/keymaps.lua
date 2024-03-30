@@ -5,6 +5,10 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- -- Delete line instead of dd - disable due to vim cannot distinguish <C-S>
+-- map("i", "<C-S-BS>", "<ESC>ddi", { noremap = true, silent = true, desc = "Delete line (insert)" })
+-- map("n", "<C-S-BS>", "dd", { noremap = true, silent = true, desc = "Delete line (normal)" })
+
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map({ "i", "t" }, "jk", "<ESC>", { desc = "Escape insert mode" })
 -- map("n", "<M-j>", ":m +1<CR>==", opts)
@@ -18,9 +22,9 @@ map({ "i", "t" }, "jk", "<ESC>", { desc = "Escape insert mode" })
 map("n", "<C-DEL>", "dw", opts)
 map("i", "<C-DEL>", "<space><ESC>ce", opts)
 
--- Delete backword word
-map("n", "<C-BS>", "i<C-w><ESC>", opts)
-map("i", "<C-BS>", "<C-w>", opts)
+-- -- Delete backword word - disable due to vim cannot distinguish BS with h
+-- map("n", "<C-BS>", "i<C-w><ESC>", opts)
+-- map("i", "<C-BS>", "<C-w>", opts)
 
 -- DAP
 map(
