@@ -10,7 +10,8 @@ local opts = { noremap = true, silent = true }
 -- map("n", "<C-S-BS>", "dd", { noremap = true, silent = true, desc = "Delete line (normal)" })
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map({ "i", "t" }, "jk", "<ESC>", { desc = "Escape insert mode" })
+map({ "i" }, "jk", "<ESC>", { desc = "Escape insert mode" })
+map({ "t" }, "fj", "<ESC>", { desc = "Escape terminal mode" })
 -- map("n", "<M-j>", ":m +1<CR>==", opts)
 -- map("n", "<M-k>", ":m -2<CR>==", opts)
 -- map("i", "<M-j>", "<ESC>:m +1<CR>==gi", opts)
@@ -51,15 +52,3 @@ map("n", "sv", ":vsplit<Return>", { noremap = true, silent = true, desc = "Split
 -- map("n", "<leader>x", "<leader>bd", { desc = "Delete buffer - User" })
 -- New tab
 map("n", "te", ":tabedit", { noremap = true, silent = true, desc = "Table edit" })
-
--- register whichkey group name for code_runner
-require("which-key")
-local present, wk = pcall(require, "which-key")
-if not present then
-  return
-end
-wk.register({
-  ["<leader>"] = {
-    r = { name = "code runner" },
-  },
-})

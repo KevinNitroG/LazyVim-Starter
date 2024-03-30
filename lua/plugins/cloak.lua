@@ -4,7 +4,7 @@ return {
   keys = {
     {
       "<leader>uh",
-      ":CloakToggle",
+      ":CloakToggle<CR>",
       desc = "Toogle cloak",
     },
   },
@@ -12,13 +12,11 @@ return {
     cloak_length = "10",
     patterns = {
       file_pattern = {
-        -- https://www.digitalocean.com/community/tools/globs
-        "*env*",
-        "*env*.{json,yml,yaml,toml}",
-        "*account*.{json,yml,yaml,toml}",
-        "*credential*.{json,yml,yaml,toml}",
-        "*password*.{json,yml,yaml,toml}",
-        "*config*.{json,yml,yaml,toml}",
+        "**/*env*.{json,yml,yaml,toml}",
+        "**/*account*.{json,yml,yaml,toml}",
+        "**/*credential*.{json,yml,yaml,toml}",
+        "**/*password*.{json,yml,yaml,toml}",
+        "**/*config*.{json,yml,yaml,toml}",
       },
       cloak_pattern = {
         "=.+",

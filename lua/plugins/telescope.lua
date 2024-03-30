@@ -52,6 +52,15 @@ return {
         grep_string = {
           additional_args = { "--hidden" },
         },
+        find_files = {
+          find_command = {
+            "rg",
+            "--files",
+            "--hidden",
+            "--glob",
+            "!{**/.git/**,**/?(.)node?(_)modules/**,**/?(.)?(v)env/**,**/.idea/**,**/.vs/**}",
+          },
+        },
         diagnostics = {
           theme = "ivy",
           initial_mode = "normal",
