@@ -1,13 +1,17 @@
 return {
   {
+    "folke/flash.nvim",
+    enabled = false,
+  },
+  {
+    "todo-comments.nvim",
+    enabled = false,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin-macchiato",
     },
-  },
-  {
-    "folke/flash.nvim",
-    enabled = false,
   },
   {
     "nvimdev/dashboard-nvim",
