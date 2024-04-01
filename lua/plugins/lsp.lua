@@ -10,8 +10,13 @@ return {
         -- "--header-insertion=iwyu",
         "--completion-style=detailed",
         "--function-arg-placeholders",
-        "--fallback-style=microsoft",
+        "--fallback-style=Microsoft",
       }
+      if vim.g.os_type == "Windows" then
+        vim.list_extend(opts.servers.clangd.cmd, {
+          "--query-driver=C:/ProgramData/mingw64/mingw64/bin/*",
+        })
+      end
     end,
   },
   {
