@@ -16,24 +16,26 @@ return {
       sources = { "filesystem" },
       filesystem = {
         filtered_items = {
-          visible = true,
-          hide_dotfiles = false,
+          visible = false,
+          hide_dotfiles = true,
           hide_gitignored = false,
           hide_hidden = true,
           always_show = {
             ".gitignore",
-            ".gitatrribute",
+            ".gitatrributes",
           },
           never_show_by_pattern = {
             "**/.DS_Store",
             "**/thumbs.db",
+            "**/*.exe",
           },
           hide_by_pattern = {
             "**/.git/*",
             "**/?(.)?(v)env/*",
             "**/.idea/*",
             "**/?(.)node?(_)modules/*",
-            "**/*.exe",
+            "**/node_modules/*",
+            "**/.venv/*",
           },
         },
       },
