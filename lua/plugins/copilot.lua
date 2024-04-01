@@ -17,8 +17,8 @@ return {
       auto_trigger = false,
       debounce = 75,
       keymap = {
-        accept = "<Tab>",
-        dismiss = "<S-Tab>",
+        accept = false,
+        dismiss = "<M-l>",
         accept_word = false,
         accept_line = false,
         next = "<M-]>",

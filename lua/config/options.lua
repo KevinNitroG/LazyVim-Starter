@@ -6,6 +6,9 @@
 
 vim.opt.relativenumber = true
 vim.opt.wrap = true
+vim.opt.breakindent = true
+vim.opt.formatoptions = "tcqjl"
+vim.opt.linebreak = true
 vim.opt.hlsearch = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
