@@ -1,7 +1,6 @@
 return {
   {
     "laytan/cloak.nvim",
-    event = "VeryLazy",
     keys = {
       {
         "<leader>uh",
