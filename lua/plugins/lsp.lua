@@ -28,10 +28,15 @@ return {
         "powershell-editor-services",
       }
       if opts.ensured_installed then
-        vim.list_extend(opts.ensured_installed, ensured_installed )
+        vim.list_extend(opts.ensured_installed, ensured_installed)
       else
         opts.ensured_installed = ensured_installed
       end
+      opts.ui = {
+        border = "rounded",
+        height = 0.7,
+        width = 0.7,
+      }
     end,
   },
   {
