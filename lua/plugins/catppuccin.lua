@@ -27,6 +27,7 @@ return {
         dap = true,
         dap_ui = true,
         which_key = true,
+        rainbow_delimiters = true,
         indent_blankline = {
           enabled = true,
           scope_color = "blue", -- catppuccin color (eg. `lavender`) Default: text - https://catppuccin.com/palette
