@@ -1,0 +1,68 @@
+return {
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    -- opts = function(_, opts)
+    --   -- https://catppuccin.com/palette
+    --   local highlight = {
+    --     "Rosewater",
+    --     "Flamingo",
+    --     "Pink",
+    --     "Mauve",
+    --     "Red",
+    --     "Maroon",
+    --     "Peach",
+    --     "Yellow",
+    --     "Green",
+    --     "Teal",
+    --     "Sky",
+    --     "Sapphire",
+    --     "Blue",
+    --     "Lavender",
+    --     "Text",
+    --     "Subtext_1",
+    --     "Subtext_0",
+    --     "Overlay_2",
+    --     "Overlay_1",
+    --     "Overlay_0",
+    --     "Surface_2",
+    --     "Surface_1",
+    --     "Surface_0",
+    --     "Base",
+    --     "Mantle",
+    --     "Crust",
+    --   }
+    --   local hooks = require("ibl.hooks")
+    --   hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+    --     vim.api.nvim_set_hl(0, "Rosewater", { fg = "#f4dbd6" })
+    --     vim.api.nvim_set_hl(0, "Flamingo", { fg = "#f0c6c6" })
+    --     vim.api.nvim_set_hl(0, "Pink", { fg = "#f5bde6" })
+    --     vim.api.nvim_set_hl(0, "Mauve", { fg = "#c6a0f6" })
+    --     vim.api.nvim_set_hl(0, "Red", { fg = "#ed8796" })
+    --     vim.api.nvim_set_hl(0, "Maroon", { fg = "#ee99a0" })
+    --     vim.api.nvim_set_hl(0, "Peach", { fg = "#f5a97f" })
+    --     vim.api.nvim_set_hl(0, "Yellow", { fg = "#eed49f" })
+    --     vim.api.nvim_set_hl(0, "Green", { fg = "#a6da95" })
+    --     vim.api.nvim_set_hl(0, "Teal", { fg = "#8bd5ca" })
+    --     vim.api.nvim_set_hl(0, "Sky", { fg = "#91d7e3" })
+    --     vim.api.nvim_set_hl(0, "Sapphire", { fg = "#7dc4e4" })
+    --     vim.api.nvim_set_hl(0, "Blue", { fg = "#8aadf4" })
+    --     vim.api.nvim_set_hl(0, "Lavender", { fg = "#b7bdf8" })
+    --     vim.api.nvim_set_hl(0, "Text", { fg = "#cad3f5" })
+    --     vim.api.nvim_set_hl(0, "Subtext_1", { fg = "#b8c0e0" })
+    --     vim.api.nvim_set_hl(0, "Subtext_0", { fg = "#a5adcb" })
+    --     vim.api.nvim_set_hl(0, "Overlay_2", { fg = "#939ab7" })
+    --     vim.api.nvim_set_hl(0, "Overlay_1", { fg = "#8087a2" })
+    --     vim.api.nvim_set_hl(0, "Overlay_0", { fg = "#6e738d" })
+    --     vim.api.nvim_set_hl(0, "Surface_2", { fg = "#5b6078" })
+    --     vim.api.nvim_set_hl(0, "Surface_1", { fg = "#494d64" })
+    --     vim.api.nvim_set_hl(0, "Surface_0", { fg = "#363a4f" })
+    --     vim.api.nvim_set_hl(0, "Base", { fg = "#24273a" })
+    --     vim.api.nvim_set_hl(0, "Mantle", { fg = "#1e2030" })
+    --     vim.api.nvim_set_hl(0, "Crust", { fg = "#181926" })
+    --   end)
+    --   opts.indent = {
+    --     highlight = highlight,
+    --   }
+    -- end,
+  },
+}
