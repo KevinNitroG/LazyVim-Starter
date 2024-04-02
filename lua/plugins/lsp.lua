@@ -22,9 +22,16 @@ return {
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
-      local ensured_installed = {
+      opts.ensure_installed = opts.ensure_installed or {}
+      local user_ensure_installed = {
+        "typescript-language-server",
+        "yaml-language-server",
         "prettierd",
+        "json-lsp",
         "vale",
+        "markdownlint",
+        "marksman",
+        "clangd",
         "clang-format",
         "cpplint",
         "pyright",
@@ -32,7 +39,7 @@ return {
         "ruff",
         "powershell-editor-services",
       }
-      vim.list_extend(opts.ensured_installed or {}, ensured_installed)
+      vim.list_extend(opts.ensure_installed, user_ensure_installed)
       opts.ui = {
         border = "rounded",
         height = 0.7,
