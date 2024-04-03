@@ -35,8 +35,9 @@ return {
         "clang-format",
         "cpplint",
         "pyright",
-        "debugpy",
         "ruff",
+        "isort",
+        "debugpy",
         "powershell-editor-services",
       }
       vim.list_extend(opts.ensure_installed, user_ensure_installed)

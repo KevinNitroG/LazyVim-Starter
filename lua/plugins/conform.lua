@@ -6,6 +6,7 @@ return {
       python = {
         "ruff_fix",
         "ruff_format",
+        -- "isort",
       },
       cpp = { "clang_format" },
       c = { "clang_format" },
