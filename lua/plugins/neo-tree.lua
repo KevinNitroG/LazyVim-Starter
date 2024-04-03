@@ -34,6 +34,12 @@ return {
           },
           hide_by_pattern = {
             "*.exe",
+            "*LICENSE*",
+            "*SECURITY*",
+            "yarn.lock",
+            "package.json",
+            "lazy-lock.json",
+            "*.bak",
             ".git",
             ".idea",
             "node_modules",
