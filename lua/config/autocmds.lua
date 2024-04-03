@@ -11,3 +11,9 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+-- https://github.com/microsoft/terminal/issues/13420
+vim.api.nvim_create_autocmd("VimLeave", {
+  desc = "Restore Cursor when VimLeave",
+  command = "set guicursor= | call chansend(v:stderr, '\x1b[ q')",
+})
