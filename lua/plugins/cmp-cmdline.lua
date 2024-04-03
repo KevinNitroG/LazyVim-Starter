@@ -4,6 +4,7 @@ return {
     dependencies = {
       "hrsh7th/nvim-cmp",
     },
+    event = "VeryLazy",
     opts = function(_, opts)
       opts = opts or {}
       local cmp = require("cmp")
