@@ -17,6 +17,7 @@ return {
           "--query-driver=C:/ProgramData/mingw64/mingw64/bin/*",
         })
       end
+      require("lspconfig.ui.windows").default_options.border = "rounded"
     end,
   },
   {

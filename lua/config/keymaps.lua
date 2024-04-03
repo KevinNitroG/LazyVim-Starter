@@ -52,3 +52,6 @@ map("n", "sv", ":vsplit<Return>", { noremap = true, silent = true, desc = "Split
 -- map("n", "<leader>x", "<leader>bd", { desc = "Delete buffer - User" })
 -- New tab
 map("n", "te", ":tabedit", { noremap = true, silent = true, desc = "Table edit" })
+
+-- -- disable command history keymap
+-- map("n", "q:", "<nop>", { noremap = true, desc = "Disable command history keymap" })

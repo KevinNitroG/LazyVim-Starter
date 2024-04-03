@@ -30,3 +30,10 @@ vim.opt.fileignorecase = false
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
+
+-- Set background of float border to none
+-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "None" })
+
+-- Opacity of background
+vim.opt.winblend = 0
+vim.opt.pumblend = 0 -- It can help nvim cmp to transparent background
