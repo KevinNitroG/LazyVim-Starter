@@ -42,8 +42,8 @@ return {
       vim.list_extend(opts.ensure_installed, user_ensure_installed)
       opts.ui = {
         border = "rounded",
-        height = 0.7,
-        width = 0.7,
+        height = 0.8,
+        width = 0.8,
       }
     end,
   },
