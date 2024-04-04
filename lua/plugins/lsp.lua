@@ -26,6 +26,7 @@ return {
       opts.ensure_installed = opts.ensure_installed or {}
       local user_ensure_installed = {
         "typescript-language-server",
+        "actionlint",
         "yaml-language-server",
         "prettierd",
         "json-lsp",
