@@ -17,6 +17,7 @@ vim.bo.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.scrolloff = 5
 vim.opt.sidescrolloff = 5
+vim.opt.fixendofline = false
 
 -- Taken from https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/lua/config/options.lua
 vim.opt.encoding = "utf-8"
