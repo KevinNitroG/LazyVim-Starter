@@ -2,7 +2,7 @@ return {
   {
     "CRAG666/code_runner.nvim",
     opts = {
-      mode = "toggleterm",
+      mode = "better_term",
     },
     keys = {
       {
