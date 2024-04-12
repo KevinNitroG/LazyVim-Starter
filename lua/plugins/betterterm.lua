@@ -8,7 +8,7 @@ return {
         function()
           require("betterTerm").open()
         end,
-        mode = { "n", "t" },
+        mode = "n",
         desc = "Open terminal",
       },
       {
@@ -16,7 +16,7 @@ return {
         function()
           require("betterTerm").select()
         end,
-        mode = { "n", "t" },
+        mode = "n",
         desc = "Select terminal",
       },
       {
@@ -26,7 +26,7 @@ return {
           require("betterTerm").open(current)
           current = current + 1
         end,
-        mode = { "n", "t" },
+        mode = "n",
         desc = "New terminal",
       },
       {
@@ -38,7 +38,7 @@ return {
             { clean = false, interrupt = true }
           )
         end,
-        mode = { "n", "t" },
+        mode = "n",
         desc = "Execute file",
       },
     },
