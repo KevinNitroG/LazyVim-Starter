@@ -9,7 +9,7 @@ local opts = { noremap = true, silent = true }
 -- map("i", "<C-S-BS>", "<ESC>ddi", { noremap = true, silent = true, desc = "Delete line (insert)" })
 -- map("n", "<C-S-BS>", "dd", { noremap = true, silent = true, desc = "Delete line (normal)" })
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
 map({ "i" }, "jk", "<ESC>", { desc = "Escape insert mode" })
 map({ "t" }, "fj", "<ESC>", { desc = "Escape terminal mode" })
 -- map("n", "<M-j>", ":m +1<CR>==", opts)
