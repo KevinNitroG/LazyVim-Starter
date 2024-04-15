@@ -14,6 +14,7 @@ return {
     },
     defaults = {
       ["<leader>r"] = { name = "+code runner" },
+      ["<leader>t"] = { name = "+better term" },
     },
   },
 }

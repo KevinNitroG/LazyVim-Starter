@@ -38,3 +38,13 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 -- Opacity of background
 vim.opt.winblend = 0
 vim.opt.pumblend = 0 -- It can help nvim cmp to transparent background
+
+-- set global variable to declare os type
+vim.g.os_type = require("config.get-os")
+
+-- VM - Vim Visual Multi settings
+vim.g.VM_mouse_mappings = 1
+vim.g.VM_maps = {
+  ["Add Cursor Up"] = "<C-PageUp>", -- <C-Up> is for resize windows
+  ["Add Cursor Down"] = "<C-PageDown>", -- <C-Down> is for resize windows
+}
