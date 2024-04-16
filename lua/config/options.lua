@@ -17,7 +17,10 @@ vim.bo.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.scrolloff = 5
 vim.opt.sidescrolloff = 5
+vim.opt.cursorline = false
 vim.opt.fixendofline = false
+vim.opt.signcolumn = "yes"
+-- vim.opt.colorcolumn = "80"
 
 -- Taken from https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/lua/config/options.lua
 vim.opt.encoding = "utf-8"
@@ -42,9 +45,7 @@ vim.opt.pumblend = 0 -- It can help nvim cmp to transparent background
 -- set global variable to declare os type
 vim.g.os_type = require("config.get-os")
 
--- VM - Vim Visual Multi settings
-vim.g.VM_mouse_mappings = 1
-vim.g.VM_maps = {
-  ["Add Cursor Up"] = "<C-PageUp>", -- <C-Up> is for resize windows
-  ["Add Cursor Down"] = "<C-PageDown>", -- <C-Down> is for resize windows
-}
+-- border for diagnostic
+vim.diagnostic.config({
+  float = { border = "rounded" },
+})

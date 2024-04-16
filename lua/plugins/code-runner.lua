@@ -1,8 +1,13 @@
 return {
   {
     "CRAG666/code_runner.nvim",
-    opts = {
-      mode = "better_term",
+    cmd = {
+      "RunCode",
+      "RunFile",
+      "RunProject",
+      "RunClose",
+      "CRFileType",
+      "CRProjects",
     },
     keys = {
       {
@@ -20,6 +25,9 @@ return {
         ":RunClose<CR>",
         desc = "RunClose",
       },
+    },
+    opts = {
+      mode = "better_term",
     },
     config = function()
       local config_file_path = "lua/kevinnitro/configs/code-runner"
