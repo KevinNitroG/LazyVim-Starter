@@ -43,6 +43,7 @@ return {
             ".git",
             ".idea",
             "node_modules",
+            "__pycache__",
             ".venv",
             ".vs",
             ".vscode",
