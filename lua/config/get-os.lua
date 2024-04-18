@@ -2,7 +2,7 @@ local get_name = function()
   local osname
   -- ask LuaJIT first
   if jit then
-    return jit.os
+    return jit.os:lower()
   end
 
   -- Unix, Linux variants
@@ -11,7 +11,7 @@ local get_name = function()
     osname = fh:read()
   end
 
-  return osname or "Windows"
+  return osname:lower() or "windows"
 end
 
 return get_name()

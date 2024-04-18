@@ -4,7 +4,7 @@ return {
     keys = {
       {
         "<leader>uh",
-        ":CloakToggle<CR>",
+        "<cmd>CloakToggle<CR>",
         desc = "Toogle cloak",
       },
     },

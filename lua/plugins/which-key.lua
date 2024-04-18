@@ -13,8 +13,8 @@ return {
       align = "left",
     },
     defaults = {
-      ["<leader>r"] = { name = "+code runner" },
-      ["<leader>t"] = { name = "+better term" },
+      ["<leader>t"] = { name = "+term/runner" },
+      ["<leader>z"] = { name = "+zen" },
     },
   },
 }

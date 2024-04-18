@@ -13,6 +13,6 @@ return {
       documentation = require("cmp").config.window.bordered(),
     }
     -- table.insert(opts.sources, { name = "emoji" })
-    opts.mapping = vim.tbl_extend("force", opts.mapping, require("config.supertab"))
+    opts.mapping = vim.tbl_deep_extend("force", opts.mapping, require("config.supertab"))
   end,
 }

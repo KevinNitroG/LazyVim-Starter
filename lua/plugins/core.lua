@@ -32,8 +32,5 @@ return {
       opts.theme = "doom" -- hyper or doom
       opts.config.week_header = { enable = false }
     end,
-    config = function(_, opts)
-      require("dashboard").setup(opts)
-    end,
   },
 }

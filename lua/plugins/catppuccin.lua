@@ -4,12 +4,13 @@ return {
     name = "catppuccin",
     enabled = true,
     opts = {
-      flavour = "macchiato",
+      default_integrations = true,
+      flavour = "auto",
       background = {
         light = "latte",
-        dark = "macchiato",
+        dark = "mocha",
       },
-      transparent_background = true,
+      transparent_background = false,
       dim_inactive = { enabled = false },
       integrations = {
         cmp = true,
@@ -23,11 +24,23 @@ return {
         markdown = true,
         mason = true,
         noice = true,
-        neotest = true,
+        symbols_outline = true,
         dap = true,
         dap_ui = true,
         which_key = true,
         rainbow_delimiters = true,
+        mini = {
+          enabled = true,
+          indentscope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
+        },
+        telescope = {
+          enabled = true,
+          -- style = "nvchad",
+        },
+        illuminate = {
+          enabled = true,
+          lsp = false,
+        },
         indent_blankline = {
           enabled = true,
           scope_color = "blue", -- catppuccin color (eg. `lavender`) Default: text - https://catppuccin.com/palette

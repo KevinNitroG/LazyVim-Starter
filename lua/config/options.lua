@@ -4,46 +4,43 @@
 
 -- LazyVim.terminal.setup("pwsh")
 
-vim.opt.relativenumber = true
-vim.opt.wrap = true
-vim.opt.breakindent = true
-vim.opt.formatoptions = "tcqjl"
-vim.opt.linebreak = true
-vim.opt.hlsearch = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.smartcase = true
+local o = vim.opt
+
+o.relativenumber = true
+o.wrap = true
+o.breakindent = true
+o.formatoptions = "tcqjl"
+o.linebreak = true
+o.hlsearch = true
+o.tabstop = 4
+o.shiftwidth = 4
+o.smartcase = true
 vim.bo.softtabstop = 4
-vim.opt.expandtab = true
-vim.opt.scrolloff = 5
-vim.opt.sidescrolloff = 5
-vim.opt.cursorline = false
-vim.opt.fixendofline = false
-vim.opt.signcolumn = "yes"
--- vim.opt.colorcolumn = "80"
+o.expandtab = true
+o.scrolloff = 5
+o.sidescrolloff = 5
+o.cursorline = false
+o.fixendofline = false
+o.signcolumn = "yes"
+o.fileformats = "unix,dos"
+-- o.colorcolumn = "80"
 
 -- Taken from https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/lua/config/options.lua
-vim.opt.encoding = "utf-8"
-vim.opt.fileencoding = "utf-8"
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
-vim.opt.smarttab = true
-vim.opt.fileignorecase = false
+o.encoding = "utf-8"
+o.fileencoding = "utf-8"
+o.autoindent = true
+o.smartindent = true
+o.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
+o.smarttab = true
+o.fileignorecase = false
 
--- Undercurl
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
-
--- Set background of float border to none
--- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "None" })
+-- -- Undercurl
+-- vim.cmd([[let &t_Cs = "\e[4:3m"]])
+-- vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Opacity of background
-vim.opt.winblend = 0
-vim.opt.pumblend = 0 -- It can help nvim cmp to transparent background
-
--- set global variable to declare os type
-vim.g.os_type = require("config.get-os")
+o.winblend = 0
+o.pumblend = 0 -- It can help nvim cmp to transparent background
 
 -- border for diagnostic
 vim.diagnostic.config({

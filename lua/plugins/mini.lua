@@ -17,7 +17,7 @@ return {
     },
     config = function(_, opts)
       local hipatterns = require("mini.hipatterns")
-      opts = vim.tbl_extend("force", opts, {
+      opts = vim.tbl_deep_extend("force", opts, {
         hex_color = hipatterns.gen_highlighter.hex_color(),
       })
       hipatterns.setup(opts)

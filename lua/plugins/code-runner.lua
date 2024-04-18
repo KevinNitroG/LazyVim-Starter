@@ -12,17 +12,17 @@ return {
     keys = {
       {
         "<leader>r",
-        ":RunCode<CR>",
+        "<cmd>RunCode<CR>",
         desc = "RunCode",
       },
       {
-        "<leader>rp",
-        ":RunProject<CR>",
+        "<leader>tp",
+        "<cmd>RunProject<CR>",
         desc = "RunProject",
       },
       {
-        "<leader>rc",
-        ":RunClose<CR>",
+        "<leader>tc",
+        "<cmd>RunClose<CR>",
         desc = "RunClose",
       },
     },
@@ -31,11 +31,17 @@ return {
     },
     config = function()
       local config_file_path = "lua/kevinnitro/configs/code-runner"
+      local os_type
+      if vim.g.is_windows then
+        os_type = "windows"
+      else
+        os_type = "linux"
+      end
       config_file_path = vim.fn.fnamemodify(vim.fn.stdpath("config"), ":p:h")
         .. "/"
         .. config_file_path
         .. "-"
-        .. vim.g.os_type
+        .. os_type
         .. ".json"
       require("code_runner").setup({
         filetype_path = config_file_path,
