@@ -14,7 +14,7 @@ return {
     },
     defaults = {
       ["<leader>t"] = { name = "+term/runner" },
-      ["<leader>z"] = { name = "+zen" },
+      -- ["<leader>z"] = { name = "+zen" },
     },
   },
 }

@@ -1,26 +1,35 @@
 return {
   {
+    "echasnovski/mini.pairs",
+    --   opts = function(_, opts)
+    --     opts.modes = { insert = true, command = true, terminal = true }
+    --     for i, _ in ipairs(opts.mappings) do
+    --       opts.mappings[i].neigh_pattern = "[^\\].[%s]"
+    --     end
+    --   end,
+    opts = {
+      modes = { insert = true, command = true, terminal = true },
+      mappings = {
+        -- do not pair when there is a word after
+        ["("] = { action = "open", pair = "()", neigh_pattern = "[^\\]?.[^%w]" },
+        ["["] = { action = "open", pair = "[]", neigh_pattern = "[^\\]?.[^%w]" },
+        ["{"] = { action = "open", pair = "{}", neigh_pattern = "[^\\]?.[^%w]" },
+        [")"] = { action = "close", pair = "()", neigh_pattern = "[^\\]?.[^%w]" },
+        ["]"] = { action = "close", pair = "[]", neigh_pattern = "[^\\]?.[^%w]" },
+        ["}"] = { action = "close", pair = "{}", neigh_pattern = "[^\\]?.[^%w]" },
+        ['"'] = { action = "closeopen", pair = '""', neigh_pattern = "[^\\]?.[^%w]", register = { cr = false } },
+        ["'"] = { action = "closeopen", pair = "''", neigh_pattern = "[^%a\\].[^%w]", register = { cr = false } },
+        ["`"] = { action = "closeopen", pair = "``", neigh_pattern = "[^\\]?.[^%w]", register = { cr = false } },
+        ["%"] = { action = "closeopen", pair = "%%", neigh_pattern = "[^\\]?.[^%w]", register = { cr = false } }, -- match for batch scripting
+      },
+    },
+  },
+  {
     "echasnovski/mini.bracketed",
+    enabled = false,
     event = "BufReadPost",
   },
   {
     "echasnovski/mini.hipatterns",
-    enabled = true,
-    event = "BufReadPost",
-    opts = {
-      highlighters = {
-        fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
-        hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
-        todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
-        note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
-      },
-    },
-    config = function(_, opts)
-      local hipatterns = require("mini.hipatterns")
-      opts = vim.tbl_deep_extend("force", opts, {
-        hex_color = hipatterns.gen_highlighter.hex_color(),
-      })
-      hipatterns.setup(opts)
-    end,
   },
 }

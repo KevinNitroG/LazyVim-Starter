@@ -24,6 +24,7 @@ return {
               globals = { "vim" },
             },
             workspace = {
+              checkThirdParty = false,
               library = {
                 [vim.fn.expand("$VIMRUNTIME/lua")] = true,
                 [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
@@ -71,8 +72,10 @@ return {
   },
   {
     "p00f/clangd_extensions.nvim",
-    opts = function(_, opts)
-      opts.inlay_hints.inline = true
-    end,
+    opts = {
+      inlay_hints = {
+        inline = true,
+      },
+    },
   },
 }

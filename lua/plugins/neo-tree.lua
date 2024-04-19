@@ -8,10 +8,13 @@ return {
     },
     opts = {
       event_handlers = {
-        event = "neo_tree_buffer_enter",
-        handler = function()
-          vim.opt_local.relativenumber = true
-        end,
+        {
+          event = "neo_tree_buffer_enter",
+          handler = function()
+            vim.opt_local.relativenumber = true
+            vim.opt_local.number = true
+          end,
+        },
       },
       sources = { "filesystem" },
       filesystem = {
@@ -44,6 +47,10 @@ return {
             ".idea",
             "node_modules",
             "__pycache__",
+            ".ruff_cache",
+            "build",
+            "dist",
+            "*.spec",
             ".venv",
             ".vs",
             ".vscode",

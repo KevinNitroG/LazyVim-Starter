@@ -4,6 +4,17 @@
 
 local map = vim.keymap.set
 
+-- better move in insert mode from NvChad: https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/mappings.lua
+map("i", "<C-b>", "<ESC>^i", { noremap = true, silent = true, desc = "Move Beginning of line" })
+map("i", "<C-e>", "<End>", { noremap = true, silent = true, desc = "Move End of line" })
+map("i", "<C-h>", "<Left>", { noremap = true, silent = true, desc = "Move Left" })
+map("i", "<C-l>", "<Right>", { noremap = true, silent = true, desc = "Move Right" })
+map("i", "<C-j>", "<Down>", { noremap = true, silent = true, desc = "Move Down" })
+map("i", "<C-k>", "<Up>", { noremap = true, silent = true, desc = "Move Up" })
+
+-- beter save file
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { noremap = true, silent = true, desc = "Save file" })
+
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
 map({ "i" }, "jk", "<ESC>", { noremap = true, silent = true, desc = "Escape insert mode" })
 
@@ -15,23 +26,7 @@ map("i", "<C-DEL>", "<space><ESC>ce", { noremap = true, silent = true, desc = "D
 map("n", "<S-Tab>", "<cmd>bprevious<cr>", { noremap = true, silent = true, desc = "Prev Buffer" })
 map("n", "<Tab>", "<cmd>bnext<cr>", { noremap = true, silent = true, desc = "Next Buffer" })
 
--- DAP
-map(
-  "n",
-  "<leader>db",
-  "<cmd> DapToggleBreakpoint <CR>",
-  { noremap = true, silent = true, desc = "Add breakpoint at line" }
-)
-map(
-  "n",
-  "<leader>dr",
-  "<cmd> DapContinue <CR>",
-  { noremap = true, silent = true, desc = "Start or continue the debugger" }
-)
-map("n", "<leader>dt", "<cmd> DapUiToogle <CR>", { noremap = true, silent = true, desc = "Toggle debugger UI" })
-
 -- Taken from https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/lua/config/keymaps.lua
 -- map("n", "<C-a>", "ggVG")
 map("n", "ss", "<cmd>split<Return>", { noremap = true, silent = true, desc = "Split horizontal" })
 map("n", "sv", "<cmd>vsplit<Return>", { noremap = true, silent = true, desc = "Split vertical" })
-map("n", "te", "<cmd>tabedit", { noremap = true, silent = true, desc = "Table edit" })

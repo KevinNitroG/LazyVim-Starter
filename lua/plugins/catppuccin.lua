@@ -24,7 +24,7 @@ return {
         markdown = true,
         mason = true,
         noice = true,
-        symbols_outline = true,
+        -- symbols_outline = true,
         dap = true,
         dap_ui = true,
         which_key = true,

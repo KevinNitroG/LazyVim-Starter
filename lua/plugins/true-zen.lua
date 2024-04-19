@@ -1,7 +1,7 @@
 return {
   {
     "pocco81/true-zen.nvim",
-    enabled = true,
+    enabled = false,
     keys = {
       {
         "<leader>za",
